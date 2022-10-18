@@ -1,0 +1,64 @@
+body{
+    display: flex;
+    justify-content: center;
+   
+    
+}
+
+
+.box{
+  position: relative;
+  margin: 20px;
+  width: 400px;
+  height: 650px;
+  background-image: url(../img/HInh-anh-anime-nam-buon-27.jpg);
+  background-size: cover;
+  border: 10px;
+  border-style: solid;
+  border-radius: 5%;
+  border-color: rgb(201, 196, 197);
+  
+}
+.date{
+  position: absolute;
+  margin-top: 20px;
+  right: 20px;
+  font-size: 25px;
+  color: aliceblue;
+}
+.content{
+  position: absolute;
+  margin-top: 400px;
+  color: aliceblue;
+  overflow: hidden;
+  margin-left: 15px;
+}
+.card_content{
+  font-size: 20px;
+  line-height: 25px;
+  
+}
+.card_button{
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  color: aliceblue;
+  font-size: 20px;
+  background-color: rgb(139, 134, 134);
+}
+.mantle{
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border-radius: 12px;
+ background-color: rgb(255, 255, 255);
+ opacity: 0;
+ transition: 0.8s linear;
+
+}
+.mantle:hover{ 
+  opacity: 1;
+}
+

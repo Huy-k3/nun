@@ -1,0 +1,125 @@
+.container{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/285-2851196_new-york-city-at-night-wallpaper-nueva-york.jpg);
+    display: flex;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;    
+}
+
+.ig{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    margin: 0px;
+    margin-left: -15px ;
+    transform: translateY(-110%);
+    transition: all 0.5s;  
+    /*box này để chứa img*/
+}
+.ig img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 2;
+}
+.dropdown:hover .ig{
+    width: 120px;
+    height: 120px;
+    margin-left: 10px;
+}
+/*=============phần 2=============*/
+.dropdown{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 240px;
+    width: 300px;
+    height: 55px;
+    border-radius: 30px;
+    border-bottom: 1px solid rgb(132, 127, 127);
+    background-color: rgb(92, 255, 206);
+    z-index: 2;
+   /* cursor: pointer ;cho bt có thể nhấn vào*/  
+}
+.dropdown:hover{
+    border-radius: 0;
+}
+.dropdown:hover .content{
+    display: flex;   
+}
+.dropdown .cover{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px ;
+    width: 300px;
+    height: 150px; 
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px; 
+    transform: translateY(-126.5%);/* để lớp phủ nó lật ngược lên trên */
+    z-index: -2;
+    transition: all 0.3s;
+}
+.dropdown:hover .cover{
+    background-color: rgba(225, 224, 224, 0.799);
+   
+}
+.dropdown span{
+    margin-top: 15px;  
+}
+.dropdown::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 145px;
+    border-left: 10px solid transparent;/* cách này nó làm mất đi <border> left và right. Hoặc dựa theo ý tưởng của 1 bạn A.H gửi mess tạo hình vuông cho xoay 90 độ sau đó <z-index>:0 để nó chìm xuống (cách này cx chưa chắc khi background-color đc hết box, nó cx có đường <line> cắt qua như cách 1). Muốn có đường <line> ko bị cắt thì có thể làm như sau: đầu tiên cx tạo tam giác dựa theo 2 cách trên có <border>. sau đó tui thử tạo lớp phủ có kích thước y như ban đầu nhưng ko có <border> cho cái này <z-index> nổi lên trên thì nó có thể che đo đường <line> bị cắt lúc tạo Lớp ban đầu...*/
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgb(92, 255, 206);
+    transform: translateY(-100%);
+}
+.content{
+    position: absolute;
+    /*display: flex;*/
+    display:none;
+    justify-content: center; 
+    width: 300px;
+    /*height: 276px;*/
+    margin-left: -40px;
+    margin-top: 40px;    
+}
+.content_item{ 
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    width: 300px;
+    height: 55px;  
+    background-color: rgb(92, 255, 206);
+   /* cursor: pointer ;*/
+    border-bottom:  1px solid rgb(140, 145, 143);    
+}
+.content_item:hover{
+    background-color: rgb(255, 251, 22);
+}
+.content_text{
+    margin-top: 20px;
+}
+.content_icon{
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    height: 55px;
+    padding-top: 20px;
+    font-size: 25px;
+    border-radius: 0px 0px 10px 10px;
+    border-bottom:  1px solid rgb(140, 145, 143);
+    background-color: rgb(92, 255, 206);
+}
+.content_icon:hover{
+    background-color: rgb(255, 251, 22);
+}
