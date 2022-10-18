@@ -1,0 +1,112 @@
+body{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   color: aliceblue;
+}
+
+.box{
+   position: relative;
+   width: 500px;
+   height: 700px;
+   border: 10px;
+   border-style: solid;
+   border-color: rgb(174, 177, 176);
+   box-sizing: border-box;
+   background-image: url(../img/1686560.webp);
+   padding: 25px;
+   background-size: cover;
+  /* background-size:contain;
+   background-repeat: no-repeat;=>dùng này img lấy cân nhưng sẽ ko bao đc hết content*/
+   
+}
+.box_one{
+   display: flex;
+   justify-content: space-between;/*căn nd qua 2 bên*/
+   width: 100%;/*lấy trọn wigth từ .box(500px)*/
+   
+}
+button{
+   margin: 0;
+   padding: 0;
+   color: aliceblue;
+   border: none;
+   background: none;
+
+}
+ul{
+   margin: 0;
+   list-style: none;
+}
+.card_content{
+   position: absolute;
+  /* padding-top: 450px;*/
+   padding-bottom: 0px;
+   bottom: -5px;
+   transition: all 0.4s ease-in-out;
+}
+
+.card_date{
+   font-size: 20px;  
+}
+.card_icons{
+   display: flex;
+   gap: 20px;/* giãn k/c giữa các icons*/
+}
+.number{
+   position: absolute;
+   top: 10px;
+   opacity: 0;
+   transform: translateX(-50%);
+   transition: all 0.2s ease-in-out;
+
+}
+.card_title{ 
+   font-size: 20px;
+}
+.card_author{
+   font-size: 35px;
+   line-height: 45px;/* khoảng cách các dòng*/
+}
+.content_1{
+   margin-bottom: -20px;/*giảm k/c giữa content_1 vs 2*/
+   left: 15px;
+}
+
+.content_2{
+   position: absolute;
+   font-size: 20px;
+   opacity: 0;
+}
+.card_introduce{
+   font-size: 25px;
+}
+.card_link{
+   color: rgb(244, 137, 137);
+   display: flex;
+   justify-content: center;
+   text-decoration: none;
+}
+.box:hover .content_2{
+   opacity: 1;
+}
+.box:hover .number{
+   opacity: 1;
+   
+}
+.box:hover .card_content{
+   bottom: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
